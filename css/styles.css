@@ -158,6 +158,17 @@ body {
   text-align: center;
   padding: 200px 0;
 }
+.overlay{
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background: linear-gradient( rgba(47, 48, 58, 0.4));
+  background-image: url(../images/hero-fon.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+}
 
 .hero-title {
   color: var(--primery-bg-color);
@@ -213,6 +224,20 @@ body {
 }
 
 /* features */
+.features-list .item::before {
+  display: block;
+  content: " ";
+    height: 120px;
+    border: 1px solid teal;
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features-list .item:nth-child(1)::before {
+  background-image: url(../images/ddd.png);
+}
 
 .features-list {
   display: flex;
