@@ -10,6 +10,7 @@
   --container-bg-color: #eeeeee;
   --line-header-color: #ececec;
   --buton-active-color: #188ce8;
+  --icon-color: #afb1b8;
 }
 h1,
 h2,
@@ -151,10 +152,20 @@ body {
 
 .contacts-mail-icon {
   margin-right: 10px;
+  fill: var(--primery-text-color);
+}
+
+.contacts-mail-icon:hover {
+  fill: var(--accent-color);
 }
 
 .contacts-tel-icon {
   margin-right: 10px;
+  fill: var(--primery-text-color);
+}
+
+.contacts-tel-icon:hover {
+  fill: var(--accent-color);
 }
 
 .contacts-nav .link:hover,
@@ -174,8 +185,9 @@ body {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  background: linear-gradient(rgba(47, 48, 58, 0.4));
-  background-image: url(../images/hero-fon.jpg);
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -296,6 +308,7 @@ body {
 .team-social {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .team-social-link {
@@ -309,6 +322,14 @@ body {
 
 .team-social-link:hover {
   background-color: var(--buton-active-color);
+}
+
+.team-social-icon {
+  fill: var(--icon-color);
+}
+
+.team-social-icon:hover {
+  fill: var(--primery-bg-color);
 }
 
 .team-name {
@@ -352,11 +373,13 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
+  margin-bottom: 16px;
 }
 /* clients  */
 .clients-list {
   display: flex;
 }
+
 .clients-item {
   width: calc((100% - 150px) / 6);
   height: 92px;
@@ -364,10 +387,48 @@ body {
   border-radius: 4px;
 }
 
+.clients-item:hover {
+  border-color: var(--buton-active-color);
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .clients-item + .clients-item {
   margin-left: 30px;
 }
+
+.client-icon {
+  fill: var(--icon-color);
+}
+
+.client-icon:hover {
+  fill: var(--accent-color);
+}
+
 /* footer */
+.futer-social {
+  display: flex;
+}
+
+.footer-fo {
+  display: flex;
+  align-content: center;
+}
+.futer-join {
+  color: var(--primery-bg-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+}
 
 .footer {
   background-color: var(--hyro-bg-color);
