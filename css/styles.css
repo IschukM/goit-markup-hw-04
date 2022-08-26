@@ -76,8 +76,6 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-
-  /* outline: 2px solid tomato; */
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -152,20 +150,12 @@ body {
 
 .contacts-mail-icon {
   margin-right: 10px;
-  fill: var(--primery-text-color);
-}
-
-.contacts-mail-icon:hover {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 .contacts-tel-icon {
   margin-right: 10px;
-  fill: var(--primery-text-color);
-}
-
-.contacts-tel-icon:hover {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 .contacts-nav .link:hover,
@@ -190,7 +180,6 @@ body {
     url(../images/hero-fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .hero-title {
@@ -305,10 +294,12 @@ body {
 }
 
 /* team */
+
 .team-social {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
 .team-social-link {
@@ -318,18 +309,16 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  color: var(--icon-color);
 }
 
 .team-social-link:hover {
   background-color: var(--buton-active-color);
+  color: var(--primery-bg-color);
 }
 
 .team-social-icon {
-  fill: var(--icon-color);
-}
-
-.team-social-icon:hover {
-  fill: var(--primery-bg-color);
+  fill: currentColor;
 }
 
 .team-name {
@@ -376,6 +365,7 @@ body {
   margin-bottom: 16px;
 }
 /* clients  */
+
 .clients-list {
   display: flex;
 }
@@ -412,22 +402,46 @@ body {
 }
 
 /* footer */
-.futer-social {
-  display: flex;
-}
 
-.footer-fo {
+.footer .container {
   display: flex;
-  align-content: center;
+  align-items: baseline;
 }
-.futer-join {
+.futer-social-text {
   color: var(--primery-bg-color);
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
 
+  margin-bottom: 20px;
+
   text-transform: uppercase;
+}
+.futer-social-list {
+  display: flex;
+  gap: 10px;
+}
+.futer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primery-bg-color);
+}
+.futer-social-link:hover {
+  background-color: var(--buton-active-color);
+}
+
+.futer-social-icon {
+  fill: currentColor;
+}
+
+.futer-social {
+  margin-left: 70px;
 }
 
 .footer {
@@ -468,6 +482,7 @@ body {
 }
 
 /* portfolio */
+
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -499,6 +514,8 @@ body {
 .filters-button:focus {
   background-color: var(--accent-color);
   color: var(--primery-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .project {
@@ -518,6 +535,11 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.flex-element:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .flex-element:nth-child(3n) {
   margin-right: 0;
 }
