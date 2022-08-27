@@ -42,6 +42,10 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: var(--primery-bg-color);
   color: var(--primery-text-color);
@@ -373,16 +377,10 @@ body {
 .clients-item {
   width: calc((100% - 150px) / 6);
   height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 
 .clients-item + .clients-item {
   margin-left: 30px;
-}
-
-.clients-item:hover {
-  border-color: var(--buton-active-color);
 }
 
 .client-link {
@@ -392,13 +390,16 @@ body {
   width: 100%;
   height: 100%;
   color: var(--icon-color);
+  border: 1px solid currentColor;
+  border-radius: 4px;
 }
 
 .client-icon {
   fill: currentColor;
 }
 
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
   color: var(--accent-color);
 }
 
@@ -509,6 +510,7 @@ body {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  background-color: var(--secondary-bg-color);
 }
 
 .filters-button:hover,
@@ -518,6 +520,15 @@ body {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
 }
 
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
 .project {
   display: flex;
   flex-wrap: wrap;
@@ -525,6 +536,7 @@ body {
 .project-name {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 .project-name .title {
   margin-bottom: 4px;
@@ -534,9 +546,6 @@ body {
   width: calc((100% - 60) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-}
-.flex-element:hover {
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
 .flex-element:nth-child(3n) {
